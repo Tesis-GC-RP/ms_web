@@ -1,0 +1,56 @@
+.registrar-button{
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+    background-image: url("https://salarios.trabajo.gob.ec/imagenes/registroTrabajo.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.buscar-button{
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1022/1022319.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 30px;
+
+}
+
+.button-font{
+    font-size: 20px;
+    text-align: center;
+}
+
+.buttons-div{
+    width: 100%; 
+    height: 80%; 
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+/*
+.buttons-div::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('https://fondosmil.com/fondo/6726.jpg"');
+        background-image: url("https://fondosmil.com/fondo/6726.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    opacity: .25;
+    content: "";
+    z-index: -1;
+}*/

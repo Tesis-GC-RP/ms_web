@@ -1,0 +1,53 @@
+<div id="profile" class="fondo" sty *ngIf="true">
+  <div class="profile-box info-box general" layout="column">
+    <mat-toolbar style="border-radius: 5%;">
+      <div class="toolbar-title">Información del usuario</div>
+    </mat-toolbar>
+    <div class="profile-pic-div">
+      <img class="profile-pic" [src]=usuarioImagen alt="">
+    </div>
+
+    <div class="content patient-info-content">
+      <div class="row">
+        <div class="info-line column">
+          <div class="title">DNI</div>
+          <div class="info">{{usuarioDNI}}</div>
+        </div>
+        <div class="info-line column">
+          <div class="title">Nombre Completo</div>
+          <div class="info">{{usuarioNombreCompleto}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="info-line column">
+          <div class="title">Genero</div>
+          <div class="info">{{usuarioGenero}}</div>
+        </div>
+        <div class="info-line column">
+          <div class="title">Fecha de Nacimiento</div>
+          <div class="info">{{usuarioFechaNacimiento}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="info-line column">
+          <div class="title">Edad</div>
+          <div class="info">{{usuarioEdad}}</div>
+        </div>
+        <div class="info-line column">
+          <div class="title">Correo</div>
+          <div class="info">{{usuarioCorreo}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="info-line column">
+          <div class="title">Telefono</div>
+          <div class="info">{{usuarioTelefono}}</div>
+        </div>
+        <div class="info-line column">
+          <div class="title">Rol</div>
+          <div class="info">{{usuarioRol}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

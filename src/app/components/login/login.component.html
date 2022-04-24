@@ -1,0 +1,23 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/img/logo.png" width="50%" alt="">
+        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form"(ngSubmit)="ingresar()">
+            <h1>Login</h1>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>DNI</mat-label>
+                <input title="dni" type="text" matInput maxlength="8" autocomplete="off" formControlName="dni">
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input title="password" type="password" matInput autocomplete="off" formControlName="password">
+            </mat-form-field>
+            <br>
+            <button type="submit" mat-raised-button class="ancho button" color="primary" [disabled]="form.invalid" >Accent</button>    
+        </form>
+        
+    </div>
+</div>
+
+
+

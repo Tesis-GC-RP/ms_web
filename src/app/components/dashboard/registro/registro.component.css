@@ -1,0 +1,9 @@
+.working {
+    background-image: url("https://rioebronews.files.wordpress.com/2017/11/trabajo-en-proceso1.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    
+}

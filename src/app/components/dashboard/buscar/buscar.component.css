@@ -1,0 +1,165 @@
+/* Styles go here */
+
+.page-layout.simple.tabbed {
+  min-height: 100%;
+}
+
+
+
+#profile .header .profile-image {
+  margin-right: 24px;
+}
+
+#profile .header .name {
+  font-size: 34px;
+  color: #FFF;
+}
+
+#profile .profile-box {
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+}
+#profile .profile-box .content {
+    background-color: #FFF;
+}
+#profile .profile-box.info-box .info-line {
+    margin-bottom: 24px;
+}
+#profile .profile-box.info-box .info-line .title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+#profile .profile-box.info-box .info-line .info {
+    font-size: 16px;
+}
+
+.column{
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.toolbar-title{
+  margin: auto;
+  justify-content: center;
+}
+
+.citas-title{
+  text-align: center;
+}
+
+.avatar {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFF;
+    outline: none;
+}
+.avatar.huge {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    line-height: 96px;
+}
+
+
+.div-cards{
+  background-color: transparent;
+  width: 70%;
+  margin: auto;
+}
+
+.mat-list-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+.div-citas {
+    padding: 50px;    
+}
+
+
+.patient-info-content{
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.example-card {
+  margin: auto;
+  margin-bottom: 15px;
+  border-style: solid;
+  background-color: white;
+}
+
+.mat-list-item {
+  background-color: black; 
+  }
+
+.example-header-image {
+  background-size: cover;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.boton-buscar{
+  margin: auto;
+  margin-left: 10px;
+}
+
+.title-buscar{
+  text-align: center;
+}
+
+
+.button24 {
+  background-color: #eee;
+  width: 10px;
+  height: 10px;
+}
+.icon24 {
+  font-size: 16px;
+  margin-top: -8px;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.buscar-fondo{
+}
+/*
+.buscar-fondo::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('https://fondosmil.com/fondo/6726.jpg"');
+  background-image: url("https://fondosmil.com/fondo/6726.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .25;
+  content: "";
+  z-index: -1;
+}
+*/
+  

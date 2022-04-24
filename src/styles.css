@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif; 
+    background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url("https://fondosmil.com/fondo/6726.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+
+
+
+.red-snackbar span{
+        color:lightgoldenrodyellow;
+        margin: auto;
+        text-align: center;
+} 
+
+.red-snackbar{
+    background-color: rgb(153, 50, 50);
+} 

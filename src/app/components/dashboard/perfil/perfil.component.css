@@ -1,0 +1,80 @@
+
+.column{
+    flex: 50%;
+  }
+  
+  .row {
+    display: flex;
+  }
+
+  .toolbar-title{
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+#profile .header .profile-image {
+    margin-right: 24px;
+  }
+  
+
+  
+  #profile .profile-box {
+      margin-bottom: auto;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 40px;
+      width: 40%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5%;
+      background-color: #FFF;
+  }
+
+  #profile .profile-box.info-box .info-line {
+      margin-bottom: 24px;
+  }
+  #profile .profile-box.info-box .info-line .title {
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 4px;
+  }
+  #profile .profile-box.info-box .info-line .info {
+      font-size: 16px;
+  }
+
+  .profile-pic{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+  }
+
+  .patient-info-content{
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+.profile-pic-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*
+.fondo::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('https://fondosmil.com/fondo/6726.jpg"');
+      background-image: url("https://fondosmil.com/fondo/6726.jpg");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  opacity: .25;
+  content: "";
+  z-index: -1;
+}
+
+*/

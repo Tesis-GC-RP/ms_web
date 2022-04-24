@@ -1,0 +1,119 @@
+<div class="buscar-fondo">
+  <div class="div-citas">
+    <h1 class="title-buscar">
+      <strong>Historial de citas</strong>
+    </h1>
+    <form style="text-align:end;" [formGroup]="form">
+      <mat-form-field style="margin: 5px; background-color:white;" class="ancho" appearance="fill">
+        <mat-label>DNI</mat-label>
+        <input title="dni" class="" type="text" matInput maxlength="8" autocomplete="off"
+          formControlName="dni">
+      </mat-form-field>
+      <button mat-fab type="button" class="boton-buscar" color="primary" aria-label="Example" (click)="getPaciente()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+  </div>
+
+  <div id="profile">
+    <div *ngIf="pacienteExiste">
+      <div class="profile-box info-box general" layout="column">
+        <mat-toolbar class="toolbar-title">
+          <div >Información del Paciente</div>
+        </mat-toolbar>
+        <div class="content patient-info-content">
+          <div class="row">
+            <div class="info-line column">
+              <div class="title">DNI</div>
+              <div class="info">{{pacienteDNI}}</div>
+            </div>
+            <div class="info-line column">
+              <div class="title">Nombre Completo</div>
+              <div class="info">{{pacienteNombreCompleto}}</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="info-line column">
+              <div class="title">Genero</div>
+              <div class="info">{{pacienteGenero}}</div>
+            </div>
+            <div class="info-line column">
+              <div class="title">Fecha de Nacimiento</div>
+              <div class="info">{{pacienteFechaNacimiento}}</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="info-line column">
+              <div class="title">Edad</div>
+              <div class="info">{{pacienteEdad}}</div>
+            </div>
+            <div class="info-line column">
+              <div class="title">Correo</div>
+              <div class="info">{{pacienteCorreo}}</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="info-line column">
+              <div class="title">Telefono</div>
+              <div class="info">{{pacienteTelefono}}</div>
+            </div>
+            <div class="info-line column">
+              <div class="title">SIS</div>
+              <div class="info">{{pacienteSIS}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!pacienteExiste"
+      style="height: 300px;display: flex; opacity: 30%; font-size: 30px; justify-content: center; align-items: center;">
+      No hay datos para mostrar.
+    </div>
+
+    <div *ngIf="tieneCitas">
+      <div class="div-cards " layout="column">
+        <mat-toolbar class="toolbar-title">
+          <div >Citas</div>
+        </mat-toolbar>
+        <mat-list-item class="cartas" *ngFor="let cita of citas">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"
+                [ngStyle]="{'background-image': 'url(' + 'https://neumoexpertosdotorg.files.wordpress.com/2015/10/icon-doctor.png?w=640' + ')'}">
+              </div>
+              <mat-card-title>{{cita.doctorNombres+ " " + cita.doctorApellidos}}</mat-card-title>
+              <mat-card-subtitle>{{cita.doctorEspecializacion}}</mat-card-subtitle>
+            </mat-card-header>
+            <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+            <mat-card-content style="font-size: 17px;">
+              <p><strong>Dia: </strong>{{cita.citaFecha}}</p>
+              <p><strong>Hora: </strong>{{cita.citaHora}}</p>
+              <p><strong>Hospital: </strong>{{cita.hospitalNombre}} </p>
+              <p><strong>Descripción: </strong> {{cita.citaDescripcion}}</p>
+              <p><strong>Reportes: </strong></p>
+              <div>
+                <mat-list-item *ngFor="let reporte of cita.reportes">
+                  <div style="display: flex;align-items: center;">
+                    {{reporte.nombre}}
+                    <button mat-fab style="max-width: 35px; max-height: 35px; margin-left: 15px;" type="button"
+                      color="black" class="boton-descargar" (click)="descargar(reporte.url, reporte.reporteId)">
+                      <mat-icon style="margin-top: -20px;">download</mat-icon>
+                    </button> <br>
+                  </div>
+                </mat-list-item>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Editar</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-list-item>
+        <br>
+      </div>
+    </div>
+    <div *ngIf="!tieneCitas"
+      style="height: 300px;display: flex; opacity: 30%; font-size: 30px; justify-content: center; align-items: center;">
+      No hay citas para mostrar.
+    </div>
+  </div>
+</div>
