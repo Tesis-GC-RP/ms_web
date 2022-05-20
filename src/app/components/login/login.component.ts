@@ -100,7 +100,7 @@ export class LoginComponent implements OnInit {
       next: (result: any) => {
         console.log(result);
         var responseDTO = <ResponseDTO<LoginResponse>> result.body;
-        if(responseDTO.errorCode == 2){
+        if(responseDTO.errorCode == 2 || responseDTO.errorCode == 1){
           this.credentialsError();
           return;
         }
