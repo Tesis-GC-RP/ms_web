@@ -72,10 +72,19 @@
 
     <div *ngIf="tieneCitas">
       <div class="div-cards " layout="column">
+        <span>Filtros: </span>
+        <mat-form-field  appearance="outline">
+          <mat-label>Especializacion</mat-label>
+          <mat-select [formControl]="especializacionControl" name="especializacion">
+            <mat-option *ngFor="let especializacion of especializaciones" [value]="especializacion.value">
+              {{especializacion.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
         <mat-toolbar class="toolbar-title">
           <div >Citas</div>
         </mat-toolbar>
-        <mat-list-item class="cartas" *ngFor="let cita of citas">
+        <mat-list-item class="cartas" *ngFor="let cita of citas | myfilter: especializacionControl.value">
           <mat-card class="example-card">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"
@@ -89,14 +98,15 @@
               <p><strong>Dia: </strong>{{cita.citaFecha}}</p>
               <p><strong>Hora: </strong>{{cita.citaHora}}</p>
               <p><strong>Hospital: </strong>{{cita.hospitalNombre}} </p>
-              <p><strong>Descripción: </strong> {{cita.citaDescripcion}}</p>
+              <p><strong>Descripción: </strong></p> 
+              <textarea readonly style="resize: none; width: 100%; height: 100px; border: none; outline: none; font-family: 'Roboto'; font-size: 17px;" title="blank">{{cita.citaDescripcion}}</textarea>
               <p><strong>Reportes: </strong></p>
               <div>
                 <mat-list-item *ngFor="let reporte of cita.reportes">
-                  <div style="display: flex;align-items: center;">
+                  <div style="display: flex;align-items: center; margin-top: 5px;">
                     {{reporte.nombre}}
                     <button mat-fab style="max-width: 35px; max-height: 35px; margin-left: 15px;" type="button"
-                      color="black" class="boton-descargar" (click)="descargar(reporte.url, reporte.reporteId)">
+                      color="black" class="boton-descargar" (click)="descargar(reporte.url, reporte.nombre)">
                       <mat-icon style="margin-top: -20px;">download</mat-icon>
                     </button> <br>
                   </div>
@@ -104,10 +114,11 @@
               </div>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>Editar</button>
+              <button mat-raised-button (click)="openDialog(cita)">Editar</button>
             </mat-card-actions>
           </mat-card>
         </mat-list-item>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
         <br>
       </div>
     </div>

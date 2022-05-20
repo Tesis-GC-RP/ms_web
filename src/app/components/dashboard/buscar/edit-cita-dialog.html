@@ -1,0 +1,40 @@
+<ng-container *ngIf="!sending">
+<h1 mat-dialog-title style="font-weight: bold;">Modifcando elementos de la cita: {{data.citaId}}</h1>
+<div mat-dialog-content style="width: 100%;">
+  <mat-form-field style="width: 100%;" appearance="fill">
+    <mat-label>Descripción de la cita</mat-label>
+    <textarea style="height: 150px; resize: none;" title="blank" type="text" matInput [(ngModel)]="nuevaDescripcion"></textarea>
+  </mat-form-field>
+  <h2>Archivos Actuales:</h2>
+  <mat-list-item *ngFor="let reporte of data.reportes">
+    <div style="display: flex;align-items: center;">
+      {{reporte.nombre}}
+      <button mat-fab style="max-width: 35px; max-height: 35px; margin-left: 15px;" type="button"
+        color="black" class="boton-descargar" (click)="eliminarReporte(reporte.reporteId)">
+        <mat-icon style="margin-top: -20px;">delete</mat-icon>
+      </button> <br>
+    </div>
+  </mat-list-item>
+  <h2>Subir archivos:</h2>
+  <input title="blank" type="file" multiple (change)="onFileChange($event)">
+  <div *ngIf="newFiles.length != 0">
+    <mat-list-item class="cartas" *ngFor="let file of newFiles">
+      <div>{{file.name}}</div>
+    </mat-list-item>
+  </div>
+</div>
+<div>
+</div>
+<div mat-dialog-actions style="justify-content: center;">
+  <button mat-raised-button color="warn" (click)="onNoClick()">Regresar</button>
+  <button mat-raised-button color="primary" style="border: 2px;" (click)="enviarCambios()" cdkFocusInitial>Enviar</button>
+</div>
+</ng-container> 
+
+
+<ng-container *ngIf="sending">
+  <div style="display: flex; height: 100%;">
+  <mat-spinner  style="margin:auto;"></mat-spinner>
+  </div>
+</ng-container> 
+

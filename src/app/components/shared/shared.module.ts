@@ -14,6 +14,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -30,7 +34,11 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     HttpClientModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    FormsModule,
+    MatPaginatorModule,
+    MatSelectModule
   ],
   exports:[
     CommonModule,
@@ -45,7 +53,11 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     HttpClientModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    FormsModule,
+    MatPaginatorModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

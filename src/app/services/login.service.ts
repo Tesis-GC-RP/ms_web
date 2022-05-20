@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { LoginRequest } from '../classes/loginRequest';
-import { Cita } from '../interfaces/cita';
-import { LoginResponse } from '../interfaces/loginResponse';
+
 
 
 @Injectable({

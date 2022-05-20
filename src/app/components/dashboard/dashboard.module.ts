@@ -6,7 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { BuscarComponent } from './buscar/buscar.component';
+import { BuscarComponent, CitaDetailDialog, MyFilterPipe } from './buscar/buscar.component';
 import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
@@ -15,7 +15,9 @@ import { RegistroComponent } from './registro/registro.component';
     InicioComponent,
     PerfilComponent,
     BuscarComponent,
-    RegistroComponent
+    RegistroComponent,
+    CitaDetailDialog,
+    MyFilterPipe
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,9 @@ import { RegistroComponent } from './registro/registro.component';
     InicioComponent,
     PerfilComponent,
     BuscarComponent,
-    RegistroComponent
+    RegistroComponent,
+    CitaDetailDialog,
+    MyFilterPipe
   ]
 })
 export class DashboardModule { }
